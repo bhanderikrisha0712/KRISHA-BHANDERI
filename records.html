@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Records | Student Management &amp; Attendance Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="records">
+<header>
+<div class="logo">STUDENT PORTAL</div>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="students.html">Students</a>
+<a href="add-student.html">Add Student</a>
+<a href="attendance.html">Attendance</a>
+<a href="academics.html">Academics</a>
+<a href="records.html" class="active">Records</a>
+<a href="about.html">About</a>
+<a href="#" onclick="logoutUser(); return false;" class="logout-link">Logout</a>
+</nav>
+</header>
+<main>
+<section class="app-page visible" id="page-records">
+<div class="page-title"><h1>Attendance History</h1><p>All saved attendance records.</p></div>
+<div class="search-box"><input id="recordSearch" onkeyup="searchRecords()" placeholder="Search name, roll or date..."/></div>
+<div class="table-box"><table><thead><tr><th>Date</th><th>Name</th><th>Roll</th><th>Status</th></tr></thead><tbody id="recordList"></tbody></table></div>
+</section>
+</main>
+<footer><p>© Student Management &amp; Attendance Portal(WEBSITE)</p></footer>
+<script src="js/app.js"></script>
+</body>
+</html>

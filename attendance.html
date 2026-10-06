@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Attendance | Student Management &amp; Attendance Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="attendance">
+<header>
+<div class="logo">STUDENT PORTAL</div>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="students.html">Students</a>
+<a href="add-student.html">Add Student</a>
+<a href="attendance.html" class="active">Attendance</a>
+<a href="academics.html">Academics</a>
+<a href="records.html">Records</a>
+<a href="about.html">About</a>
+<a href="#" onclick="logoutUser(); return false;" class="logout-link">Logout</a>
+</nav>
+</header>
+<main>
+<section class="app-page visible" id="page-attendance">
+<div class="page-title"><h1>Attendance</h1><p id="attendanceDate">Date: 2/10/2026</p></div>
+<div class="attendance-info">Press only <b>Present</b> or <b>Absent</b> for each student. No dropdown is required.</div>
+<div class="table-box"><table><thead><tr><th>No.</th><th>Name</th><th>Roll</th><th>Present</th><th>Absent</th><th>Status</th></tr></thead><tbody id="attendanceList"></tbody></table></div>
+<div class="save-area"><button class="gold-button" onclick="saveAttendance()">Save Attendance</button><button class="black-button" onclick="resetAttendance()">Reset</button></div>
+</section>
+</main>
+<footer><p>© Student Management &amp; Attendance Portal(WEBSITE)</p></footer>
+<script src="js/app.js"></script>
+</body>
+</html>

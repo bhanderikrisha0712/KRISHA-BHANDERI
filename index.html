@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Student Management & Attendance Portal</title>
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<div class="login-page">
+  <div class="login-box">
+    <div class="login-title">STUDENT PORTAL</div>
+    <h1>Login</h1>
+    <p>Student Management & Attendance Portal</p>
+    <form id="loginForm">
+      <label>Username</label>
+      <input id="username" type="text" placeholder="Enter username" required>
+      <label>Password</label>
+      <input id="password" type="password" placeholder="Enter password" required>
+      <button type="submit">LOGIN</button>
+      <div id="loginError" style="margin-top:12px;color:#d33;font-weight:600;"></div>
+    </form>
+    <div class="login-note">Default login: admin / admin123</div>
+  </div>
+</div>
+<script>
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const error = document.getElementById("loginError");
+  error.textContent = "";
+  try {
+    const body = new URLSearchParams({
+      username: document.getElementById("username").value.trim(),
+      password: document.getElementById("password").value
+    });
+    const response = await fetch("../backend/api/login.php", {
+      method: "POST",
+      headers: {"Content-Type": "application/x-www-form-urlencoded"},
+      credentials: "same-origin",
+      body
+    });
+    const data = await response.json();
+    if (data.success) {
+      window.location.href = "dashboard.html";
+    } else {
+      error.textContent = data.message || "Invalid username or password.";
+    }
+  } catch (err) {
+    error.textContent = "Backend not connected. Start Apache/PHP and open this project through localhost.";
+  }
+});
+</script>
+</body>
+</html>

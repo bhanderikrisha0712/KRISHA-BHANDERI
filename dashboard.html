@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Student Management &amp; Attendance Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+<header>
+<div class="logo">STUDENT PORTAL</div>
+<nav>
+<a href="dashboard.html" class="active">Dashboard</a>
+<a href="students.html">Students</a>
+<a href="add-student.html">Add Student</a>
+<a href="attendance.html">Attendance</a>
+<a href="academics.html">Academics</a>
+<a href="records.html">Records</a>
+<a href="about.html">About</a>
+<a href="#" onclick="logoutUser(); return false;" class="logout-link">Logout</a>
+</nav>
+</header>
+<main>
+<section class="app-page visible" id="page-dashboard">
+<div class="hero">
+<h1>Student Management &amp; Attendance Portal</h1>
+<p>Complete student information, attendance and academic performance in one website.</p>
+<p class="nav-note">50 demo students are already loaded. Changes are saved by the PHP backend.</p>
+</div>
+<div class="page-title"><h1>Dashboard</h1><p id="todayDate">Today: 2/10/2026</p></div>
+<div class="dashboard-cards">
+<div class="card"><div class="card-icon">👨‍🎓</div><h3>Total Students</h3><h2 id="totalStudents">50</h2></div>
+<div class="card"><div class="card-icon">✓</div><h3>Present Today</h3><h2 id="presentStudents">0</h2></div>
+<div class="card"><div class="card-icon">✕</div><h3>Absent Today</h3><h2 id="absentStudents">0</h2></div>
+<div class="card"><div class="card-icon">%</div><h3>Today's Attendance</h3><h2 id="attendancePercentage">0%</h2></div>
+</div>
+<div class="section"><h2>Quick Actions</h2><div class="quick-buttons">
+<a class="gold-button" href="add-student.html">+ Add Student</a>
+<a class="gold-button" href="attendance.html">Mark Attendance</a>
+<a class="black-button" href="students.html">View All Students</a>
+<a class="black-button" href="academics.html">Academic Performance</a>
+</div></div>
+<div class="section"><h2>Student Overview</h2>
+<div class="table-box"><table><thead><tr><th>Roll</th><th>Name</th><th>Course</th><th>Attendance</th><th>Action</th></tr></thead><tbody id="dashboardStudents"></tbody></table></div>
+</div>
+</section>
+</main>
+<footer><p>© Student Management &amp; Attendance Portal(WEBSITE)</p></footer>
+<script src="js/app.js"></script>
+</body>
+</html>

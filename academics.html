@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Academics | Student Management &amp; Attendance Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="academics">
+<header>
+<div class="logo">STUDENT PORTAL</div>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="students.html">Students</a>
+<a href="add-student.html">Add Student</a>
+<a href="attendance.html">Attendance</a>
+<a href="academics.html" class="active">Academics</a>
+<a href="records.html">Records</a>
+<a href="about.html">About</a>
+<a href="#" onclick="logoutUser(); return false;" class="logout-link">Logout</a>
+</nav>
+</header>
+<main>
+<section class="app-page visible" id="page-academics">
+<div class="page-title"><h1>Academic Performance</h1><p>Subject-wise marks, percentage and automatic grade calculation.</p></div>
+<div class="form-box"><h2>Select Student</h2><select id="academicStudent" onchange="showAcademicForm()"></select></div>
+<div id="academicForm"></div>
+</section>
+</main>
+<footer><p>© Student Management &amp; Attendance Portal(WEBSITE)</p></footer>
+<script src="js/app.js"></script>
+</body>
+</html>

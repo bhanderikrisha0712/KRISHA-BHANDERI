@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Students | Student Management &amp; Attendance Portal</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="students">
+<header>
+<div class="logo">STUDENT PORTAL</div>
+<nav>
+<a href="dashboard.html">Dashboard</a>
+<a href="students.html" class="active">Students</a>
+<a href="add-student.html">Add Student</a>
+<a href="attendance.html">Attendance</a>
+<a href="academics.html">Academics</a>
+<a href="records.html">Records</a>
+<a href="about.html">About</a>
+<a href="#" onclick="logoutUser(); return false;" class="logout-link">Logout</a>
+</nav>
+</header>
+<main>
+<section class="app-page visible" id="page-students">
+<div class="page-title"><h1>All Students</h1><p>Complete list of 50 pre-loaded students.</p></div>
+<div class="search-box"><input id="studentSearch" onkeyup="searchStudents()" placeholder="Search by name, roll, course..." type="text"/></div>
+<div class="table-box"><table><thead><tr><th>ID</th><th>Student</th><th>Roll</th><th>Course</th><th>Status</th><th>Attendance</th><th>Actions</th></tr></thead><tbody id="studentList"></tbody></table></div>
+</section>
+</main>
+<footer><p>© Student Management &amp; Attendance Portal(WEBSITE)</p></footer>
+<script src="js/app.js"></script>
+</body>
+</html>
